@@ -8,7 +8,7 @@
 // Has a withdraw method which takes a number amount as a parameter and subtracts it to your account's balance
 // Has a checkBalance method which prints out the current balance of the account and the account owner's name (pro tip: ES6 template literals make this a bit cleaner)
 
-class PartOne {
+class CheckingsAccount {
 	constructor(private initialBalance:number, private ownerName:string){}
 
 	deposit(num:number) {
@@ -24,6 +24,6 @@ class PartOne {
 	}
 }
 
-let customer:PartOne = new PartOne(140000, "George");
-customer.deposit();
-customer.checkBalance();
+let customer:CheckingsAccount = new CheckingsAccount(140000, "George");
+customer.deposit(3000);
+customer.checkBalance(900);
