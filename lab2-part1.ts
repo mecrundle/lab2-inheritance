@@ -9,18 +9,22 @@
 // Has a checkBalance method which prints out the current balance of the account and the account owner's name (pro tip: ES6 template literals make this a bit cleaner)
 
 class CheckingsAccount {
-	constructor(private initialBalance:number, private ownerName:string){}
+	private balance: number;
+
+	constructor(private initialBalance:number, private ownerName:string){
+		this.balance = initialBalance;
+	}
 
 	deposit(num:number) {
-		this.initialBalance += num;
+		this.balance += num;
 	}
 
 	withdraw(num:number) {
-		this.initialBalance -= num;
+		this.balance -= num;
 	}
 
 	checkBalance(num:number) {
-		console.log(this.initialBalance + " " + this.ownerName);
+		console.log(this.balance + " " + this.ownerName);
 	}
 }
 
